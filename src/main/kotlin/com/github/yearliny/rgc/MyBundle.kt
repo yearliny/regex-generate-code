@@ -1,4 +1,4 @@
-package com.github.yearliny.regexgeneratecode
+package com.github.yearliny.rgc
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

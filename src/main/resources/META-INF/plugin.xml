@@ -7,12 +7,19 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.yearliny.regexgeneratecode.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.yearliny.regexgeneratecode.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.yearliny.rgc.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.github.yearliny.rgc.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.yearliny.regexgeneratecode.listeners.MyProjectManagerListener"
+        <listener class="com.github.yearliny.rgc.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.yearliny.rgc.action.ConfigDialogAction"
+                class="com.github.yearliny.rgc.action.ConfigDialogAction" text="Regex Code Generate Config"
+                description="Config regex and code generate templates">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
